@@ -2,8 +2,8 @@
 
 Uma aplicação web simples para organizar tarefas do dia a dia. Este projeto foi desenvolvido para praticar a manipulação do DOM e o uso de `localStorage` para persistência de dados no navegador.
 
-![Preview do To-Do List](https://github.com/luizhenriquegs/lista-de-tarefas/blob/main/preview.png)
-*(Lembre-se de tirar um print do projeto pronto, renomear para `preview.png` e subir para o GitHub)*
+<img width="635" height="264" alt="image" src="https://github.com/user-attachments/assets/7dbed40d-c4e1-4425-ad3f-228e7fc2027e" />
+
 
 ---
 

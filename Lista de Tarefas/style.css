@@ -1,0 +1,132 @@
+/* Reset básico e fontes (usando uma fonte do Google) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #121212; /* Cor de fundo escura */
+    color: #e0e0e0; /* Cor de texto clara */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.container {
+    background-color: #1e1e1e; /* Cor do "card" */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 90vw;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* Estilo do formulário */
+#task-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #333;
+    background-color: #252525;
+    color: #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none; /* Remove a borda azul ao clicar */
+    transition: border-color 0.2s;
+}
+
+#task-input:focus {
+    border-color: #007bff; /* Destaca com a cor do botão */
+}
+
+#task-form button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradiente bonito */
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#task-form button:hover {
+    transform: scale(1.05); /* Efeito de leve zoom */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo da lista de tarefas */
+#task-list {
+    list-style-type: none;
+}
+
+#task-list li {
+    background-color: #2a2a2a; /* Cor de fundo do item */
+    border: 1px solid #333;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+    transition: background-color 0.2s;
+}
+
+#task-list li:hover {
+    background-color: #303030; /* Leve destaque ao passar o mouse */
+}
+
+/* O texto da tarefa, que é editável */
+#task-list li .task-text {
+    flex-grow: 1;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+#task-list li .task-text:focus {
+    background-color: #444; /* Fundo cinza ao editar */
+    outline: none;
+}
+
+/* ----- IMPORTANTE: Estilo da tarefa concluída ----- */
+#task-list li.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.7;
+}
+
+/* Botão de deletar */
+#task-list li .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+#task-list li .delete-btn:hover {
+    opacity: 1;
+}
